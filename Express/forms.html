@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Person Details</h1>
+    <form action="/send" method="post">                 <!--what endpoint for post request(action)-->
+        <label for="emailID">E-mail</label>                 <!--label for ID only-->
+        <input name="email" type="text" id ="emailID">      <!--identified by name attr-->
+        <label for="passwordID">Password</label>
+        <input name="password" type="text" id="passwordID">    
+        <input type="submit" value="Send">     <!--type attr triggers the post request(submission) -->
+    </form>
+</body>
+</html>

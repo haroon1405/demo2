@@ -1,0 +1,24 @@
+SELECT * FROM public.world_food
+
+SELECT country FROM public.world_food
+
+SELECT country FROM public.world_food
+
+SELECT rice_production 
+FROM public.world_food
+WHERE country = 'United States'
+
+SELECT country FROM public.world_food
+WHERE wheat_production > 20
+
+SELECT country FROM public.world_food
+WHERE country LIKE 'U%'
+
+SELECT country FROM public.world_food
+WHERE country LIKE '%a'
+
+INSERT INTO public.world_food
+VALUES (10,'Italy',1.46,7.3)
+
+INSERT INTO public.world_food (country,rice_production,wheat_production)
+VALUES ('Italy',1.46,7.3)

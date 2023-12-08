@@ -1,0 +1,56 @@
+CREATE TABLE products( 
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+  )
+
+
+INSERT INTO products
+VALUES (1,"Pen",1.20)
+
+
+INSERT INTO products (id,name)
+VALUES (2,"Pencil")
+
+
+SELECT * FROM products
+
+
+SELECT name,price from products
+
+
+SELECT * FROM products
+WHERE id=2
+
+
+UPDATE products
+SET price = 0.8
+WHERE id=2
+
+
+ALTER TABLE products
+ADD stock INT
+
+DELETE FROM products
+WHERE name="Pencil"
+
+
+CREATE TABLE orders(
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+  FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders
+INNER JOIN customers on orders.customer_id = customers.id
+
+SELECT orders.order_number, products.name, products.price, products.stock
+from orders
+inner join products on orders.product_id = products.id

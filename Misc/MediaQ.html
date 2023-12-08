@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .img1,.img2{
+            width: 300px;
+            height: 100%;
+            margin-right: 20px;
+        }
+        .img1 img, .img2 img{
+            width: 100%;
+        }
+        .heading{
+            margin: 30px 40px;
+            width: 300px;
+        }
+        .heading img{
+            width: 100%;
+        }
+        .subhead{
+            margin: 50px 40px 80px 40px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+        .text{
+            width: 700px;
+        }
+        span{
+            color: rgb(9, 9, 120);
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .card1, .card2{
+            display: flex;
+            padding: 0px 40px;
+            font-size: 25px;
+        }
+        .text1, .text2{
+            margin: 10px 20px;
+            width: 400px;
+        }
+        .texthead1, .texthead2{
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .footer{
+            font-size: 22px;
+            position: absolute;
+            bottom: 20px;
+            right: 50px;
+        }
+
+        @media (max-width:550px){
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .subhead{
+                display: flex;
+                text-align: center;
+            }
+            .heading{
+                width: 150px;
+                margin: 15px 0px 0px 15px;
+            }
+            .container,.card1,.card2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .car1,.card2{
+                margin: 0px;
+            }
+            .img1,.img2{
+                margin: 10px 0px;
+                padding: 0px;
+                width: 350px;
+            }
+            .text1,.text2{
+                width: 350px;
+            }
+            .textcont1,.textcont2{
+                margin-bottom: 40px;
+            }
+            .footer{
+                position: static;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heading"><img src="./images/logo.png" alt="logo"></div>
+    <div class="subhead">
+        <div class="text">We are a <span>Creative</span> Design Agency</div>
+    </div>
+    <div class="container">
+        <div class="card1">
+            <div class="img1"><img src="./images/beautiful.jpg" alt="beauty"></div>
+            <div class="text1">
+                <div class="texthead1">Beauty</div>
+                <div class="textcont1">We strive to create the most beautiful websites for all your needs. Working closely with you to design and develop an amazing website for your business.</div>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img2"><img src="./images/construction.jpg" alt="constr"></div>
+            <div class="text1">
+                <div class="texthead2">Construction</div>
+                <div class="textcont2">Built by our team of professional developers, we ensure the most rigourous and modern websites. Built from scratch using HTML and CSS. Only the best for you.</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Create. Develop. Design.</div>
+</body>
+</html>

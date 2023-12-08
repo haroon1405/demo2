@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            border: 2px solid black;
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+        }
+        .container>*{
+            padding: 5px;
+            height: 50px;
+            border: 2px solid blue;
+        }
+        .box1{
+            flex-basis: 200px;
+        }
+        .box2{
+            min-width: 200px;
+        }
+        .box3{
+            min-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Home</div>
+        <div class="box2">About</div>
+        <div class="box3">Contact Us</div>
+        <!-- <div class="box4">Best Programming School</div> -->
+    </div>
+</body>
+</html>
+
+<!-- flex direcn and wrap are set on parent -->
+<!-- inline flex in colm flexbox takes reqd width only -->
+<!-- Justify content and align items set on parent(change with 
+    parent width) and get shrunk first(empty area) -->
+<!-- width set on both parent and child -->
+<!-- on child, flex-basis takes priority over width -->
+<!-- flex order, flex basis set on child -->
+<!-- max and min width(not responsive) take highest priority but only applicable for boundary condns -->
+<!-- flex grow n shrink take even higher priority for responsivness -->
+<!-- for equal widths of boxes, flex:1(for all elmnts) and change each item proportion-->
+<!-- minwidth = flexshrink(0)+flexbasis -->
